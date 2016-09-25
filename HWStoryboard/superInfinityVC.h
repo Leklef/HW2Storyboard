@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  superInfinityVC.h
 //  HWStoryboard
 //
-//  Created by Ildar Zalyalov on 24.09.16.
+//  Created by Ленар on 25.09.16.
 //  Copyright © 2016 com.ildar.itis. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface superInfinityVC : UIViewController
 
 @end
-
