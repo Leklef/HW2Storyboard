@@ -7,13 +7,13 @@
 //
 
 #import "infinityVC.h"
+#import "DataUIView.h"
 
 @interface infinityVC ()
 
 @property (weak, nonatomic) IBOutlet UILabel *firstLabel;
 @property (weak, nonatomic) IBOutlet UIButton *magicButton;
-@property (strong, nonatomic) NSArray *arr;
-@property (strong, nonatomic) NSArray *colorArr;
+@property (strong, nonatomic) DataUIView *data;
 
 @end
 
@@ -21,17 +21,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _arr = @[@"hellYeah", @"bad", @"Goood", @"This is nice", @"Hi"];
-    _colorArr = @[[UIColor grayColor],[UIColor yellowColor],[UIColor redColor],[UIColor grayColor],[UIColor greenColor]];
-    self.title = [_arr objectAtIndex:arc4random()%5];
+    _data = [DataUIView new];
+    self.title = [_data.nameArray objectAtIndex:_data.random];
 }
 
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    [_magicButton setTitle:[_arr objectAtIndex:arc4random()%5] forState:UIControlStateNormal];
-    _magicButton.backgroundColor =[_colorArr objectAtIndex:arc4random()%5];
+    
+    [_magicButton setTitle:[_data.nameArray objectAtIndex:_data.random] forState:UIControlStateNormal];
+    _magicButton.backgroundColor =[_data.colorArray objectAtIndex:_data.random];
     [_magicButton sizeToFit];
-    self.view.backgroundColor = [_colorArr objectAtIndex:arc4random()%5];
+    self.view.backgroundColor = [_data.colorArray objectAtIndex:_data.random];
 }
 - (IBAction)toRootButton:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];

@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CancelVC : UIViewController{
-    NSInteger currentIndex;
-}
-@property (strong, nonatomic) IBOutlet UILabel *content;
-@property (strong, nonatomic) NSArray *dataSource;
+@interface CancelVC : UIViewController
 
 @end

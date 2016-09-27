@@ -7,12 +7,12 @@
 //
 
 #import "superInfinityVC.h"
+#import "DataUIView.h"
 
 @interface superInfinityVC ()
 
-@property (strong, nonatomic) NSArray *arr;
-@property (strong, nonatomic) NSArray *colorArr;
 @property (weak, nonatomic) IBOutlet UIButton *magicBut;
+@property (strong, nonatomic) DataUIView *data;
 
 @end
 
@@ -20,30 +20,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _arr = @[@"hellYeah", @"bad", @"Goood", @"This is nice", @"Hi"];
-    _colorArr = @[[UIColor grayColor],[UIColor yellowColor],[UIColor redColor],[UIColor grayColor],[UIColor greenColor]];
-    self.title = [_arr objectAtIndex:arc4random()%5];
+    _data = [DataUIView new];
+    self.title = [_data.nameArray objectAtIndex:_data.random];
+    _magicBut.frame = CGRectMake(self.view.center.x, self.view.center.y, 5, 5);
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    [_magicBut setTitle:@"" forState:UIControlStateNormal];
-    _magicBut.frame = CGRectMake(self.view.center.x, self.view.center.y, 5, 5);
+    self.view.backgroundColor = [_data.colorArray objectAtIndex:_data.random];
+    _magicBut.backgroundColor =[_data.colorArray objectAtIndex:_data.random];
     [_magicBut setCenter:self.view.center];
-    self.view.backgroundColor = [_colorArr objectAtIndex:arc4random()%5];
-    _magicBut.backgroundColor =[_colorArr objectAtIndex:arc4random()%5];
 }
 
 - (void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:YES];
-    [_magicBut setTitle:[_arr objectAtIndex:arc4random()%5] forState:UIControlStateNormal];
+    [_magicBut setTitle:[_data.nameArray objectAtIndex:_data.random] forState:UIControlStateNormal];
     [_magicBut sizeToFit];
 }
 
+#pragma mark - Infinity push
+
 - (IBAction)pushBut:(id)sender {
-    _magicBut.titleLabel.text = [_arr objectAtIndex:arc4random()%5];
-    [_magicBut sizeToFit];
+    UIViewController *myController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyController"];
+    [self.navigationController pushViewController: myController animated:YES];
 }
+
+#pragma mark - Root pop
 
 - (IBAction)toRootButton:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];

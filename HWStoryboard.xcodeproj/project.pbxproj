@@ -14,11 +14,10 @@
 		7C3F80461D965F9800E94C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C3F80441D965F9800E94C61 /* LaunchScreen.storyboard */; };
 		7C3F80511D965F9800E94C61 /* HWStoryboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F80501D965F9800E94C61 /* HWStoryboardTests.m */; };
 		7C3F805C1D965F9800E94C61 /* HWStoryboardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F805B1D965F9800E94C61 /* HWStoryboardUITests.m */; };
-		AE9317281D971F9300F7208B /* ShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9317271D971F9300F7208B /* ShowVC.m */; };
 		AE93172B1D971FA700F7208B /* CancelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE93172A1D971FA700F7208B /* CancelVC.m */; };
+		AE95CB611D9A4B7500630303 /* DataUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE95CB601D9A4B7500630303 /* DataUIView.m */; };
 		AEC94BC61D9810E6008E6C67 /* infinityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC94BC51D9810E6008E6C67 /* infinityVC.m */; };
 		AEC94BC91D9816D6008E6C67 /* superInfinityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC94BC81D9816D6008E6C67 /* superInfinityVC.m */; };
-		AEC94BCC1D981EE0008E6C67 /* SuperSuperInfinityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC94BCB1D981EE0008E6C67 /* SuperSuperInfinityVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,16 +52,14 @@
 		7C3F80571D965F9800E94C61 /* HWStoryboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HWStoryboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3F805B1D965F9800E94C61 /* HWStoryboardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWStoryboardUITests.m; sourceTree = "<group>"; };
 		7C3F805D1D965F9800E94C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE9317261D971F9300F7208B /* ShowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowVC.h; sourceTree = "<group>"; };
-		AE9317271D971F9300F7208B /* ShowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowVC.m; sourceTree = "<group>"; };
 		AE9317291D971FA700F7208B /* CancelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelVC.h; sourceTree = "<group>"; };
 		AE93172A1D971FA700F7208B /* CancelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelVC.m; sourceTree = "<group>"; };
+		AE95CB5F1D9A4B7500630303 /* DataUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataUIView.h; sourceTree = "<group>"; };
+		AE95CB601D9A4B7500630303 /* DataUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataUIView.m; sourceTree = "<group>"; };
 		AEC94BC41D9810E6008E6C67 /* infinityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infinityVC.h; sourceTree = "<group>"; };
 		AEC94BC51D9810E6008E6C67 /* infinityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infinityVC.m; sourceTree = "<group>"; };
 		AEC94BC71D9816D6008E6C67 /* superInfinityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = superInfinityVC.h; sourceTree = "<group>"; };
 		AEC94BC81D9816D6008E6C67 /* superInfinityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = superInfinityVC.m; sourceTree = "<group>"; };
-		AEC94BCA1D981EE0008E6C67 /* SuperSuperInfinityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperSuperInfinityVC.h; sourceTree = "<group>"; };
-		AEC94BCB1D981EE0008E6C67 /* SuperSuperInfinityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperSuperInfinityVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +169,8 @@
 		AE93171B1D971C5A00F7208B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE95CB5F1D9A4B7500630303 /* DataUIView.h */,
+				AE95CB601D9A4B7500630303 /* DataUIView.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -183,8 +182,6 @@
 				AEC94BC51D9810E6008E6C67 /* infinityVC.m */,
 				AEC94BC71D9816D6008E6C67 /* superInfinityVC.h */,
 				AEC94BC81D9816D6008E6C67 /* superInfinityVC.m */,
-				AEC94BCA1D981EE0008E6C67 /* SuperSuperInfinityVC.h */,
-				AEC94BCB1D981EE0008E6C67 /* SuperSuperInfinityVC.m */,
 			);
 			name = Sceen1;
 			sourceTree = "<group>";
@@ -192,8 +189,6 @@
 		AE9317241D971F6D00F7208B /* Sceen2 */ = {
 			isa = PBXGroup;
 			children = (
-				AE9317261D971F9300F7208B /* ShowVC.h */,
-				AE9317271D971F9300F7208B /* ShowVC.m */,
 				AE9317291D971FA700F7208B /* CancelVC.h */,
 				AE93172A1D971FA700F7208B /* CancelVC.m */,
 			);
@@ -334,11 +329,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEC94BC91D9816D6008E6C67 /* superInfinityVC.m in Sources */,
-				AE9317281D971F9300F7208B /* ShowVC.m in Sources */,
 				AE93172B1D971FA700F7208B /* CancelVC.m in Sources */,
-				AEC94BCC1D981EE0008E6C67 /* SuperSuperInfinityVC.m in Sources */,
 				7C3F803B1D965F9800E94C61 /* AppDelegate.m in Sources */,
 				7C3F80381D965F9800E94C61 /* main.m in Sources */,
+				AE95CB611D9A4B7500630303 /* DataUIView.m in Sources */,
 				AEC94BC61D9810E6008E6C67 /* infinityVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
